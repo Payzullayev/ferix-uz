@@ -138,14 +138,14 @@ export default function Home() {
 
 <section className="py-32 px-6">
 
-  <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+  <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
 
     {/* left image */}
     <div className="relative">
 
       <div className="absolute -inset-4 bg-[#F5B942]/10 blur-3xl rounded-[40px]" />
 
-      <div className="relative w-full h-[500px] rounded-[40px] overflow-hidden border border-white/10 bg-black flex items-center justify-center">
+      <div className="relative w-full h-[320px] md:h-[500px] rounded-[40px] overflow-hidden border border-white/10 bg-black flex items-center justify-center">
 
   {/* glow effect */}
   <div className="absolute inset-0 bg-gradient-to-r from-[#F5B942]/20 via-transparent to-[#F5B942]/20 blur-3xl opacity-40" />
@@ -186,40 +186,40 @@ export default function Home() {
         FERIX_UZ HAQIDA
       </p>
 
-      <h2 className="text-5xl font-black leading-tight">
+      <h2 className="text-3xl md:text-5xl font-black leading-tight">
         Biz dunyoni harakatlantiruvchi
         liftlarni yaratamiz.
       </h2>
 
-      <p className="text-gray-300 text-lg leading-relaxed mt-8">
+      <p className="text-gray-300 text-base md:text-lg leading-relaxed mt-8">
         Ferix.uz — zamonaviy texnologiyalar asosida
         ishlaydigan lift zavodi. Bizning maqsadimiz
         xavfsizlik, sifat va ishonchlilikni ta’minlash.
       </p>
 
       {/* features */}
-      <div className="grid grid-cols-2 gap-5 mt-10">
+      <div className="grid-cols-1 sm:grid-cols-2 gap-5 mt-10">
 
         <div className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-[#F5B942]/40 transition">
-          <h3 className="text-[#F5B942] font-bold text-lg">
+          <h3 className="text-[#F5B942] font-bold text-base md:text-lg">
             Zamonaviy texnologiya
           </h3>
         </div>
 
         <div className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-[#F5B942]/40 transition">
-          <h3 className="text-[#F5B942] font-bold text-lg">
+          <h3 className="text-[#F5B942] font-bold text-base md:text-lg">
             Energiya tejamkor
           </h3>
         </div>
 
         <div className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-[#F5B942]/40 transition">
-          <h3 className="text-[#F5B942] font-bold text-lg">
+          <h3 className="text-[#F5B942] font-bold text-base md:text-lg">
             Xavfsizlik kafolati
           </h3>
         </div>
 
         <div className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-[#F5B942]/40 transition">
-          <h3 className="text-[#F5B942] font-bold text-lg">
+          <h3 className="text-[#F5B942] font-bold text-base md:text-lg">
             Yuqori sifat
           </h3>
         </div>

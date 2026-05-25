@@ -1,3 +1,4 @@
+"use client";
 import Navbar from "@/components/navbar";
 
 export default function Home() {
@@ -144,11 +145,37 @@ export default function Home() {
 
       <div className="absolute -inset-4 bg-[#F5B942]/10 blur-3xl rounded-[40px]" />
 
-      <img
-        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop"
-        alt=""
-        className="relative rounded-[40px] w-full h-[500px] object-cover border border-white/10"
-      />
+      <div className="relative w-full h-[500px] rounded-[40px] overflow-hidden border border-white/10 bg-black flex items-center justify-center">
+
+  {/* glow effect */}
+  <div className="absolute inset-0 bg-gradient-to-r from-[#F5B942]/20 via-transparent to-[#F5B942]/20 blur-3xl opacity-40" />
+
+  {/* video */}
+  <video
+    id="factoryVideo"
+    className="relative h-full object-contain z-10"
+    poster="/images/poster.jpg"
+  >
+    <source src="/videos/factory.mp4" type="video/mp4" />
+  </video>
+
+  {/* play button */}
+  <button
+    onClick={() => {
+      const video = document.getElementById("factoryVideo") as HTMLVideoElement;
+
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    }}
+    className="absolute z-20 w-20 h-20 rounded-full bg-[#F5B942] text-black text-3xl font-bold flex items-center justify-center hover:scale-110 transition"
+  >
+    ▶
+  </button>
+
+</div>
 
     </div>
 

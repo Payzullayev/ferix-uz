@@ -140,40 +140,48 @@ export default function Home() {
 
   <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
 
-    {/* left image */}
+    {/* VIDEO */}
     <div className="relative">
 
       <div className="absolute -inset-4 bg-[#F5B942]/10 blur-3xl rounded-[40px]" />
 
       <div className="relative w-full h-[320px] md:h-[500px] rounded-[40px] overflow-hidden border border-white/10 bg-black flex items-center justify-center">
 
-  {/* glow effect */}
-  <div className="absolute inset-0 bg-gradient-to-r from-[#F5B942]/20 via-transparent to-[#F5B942]/20 blur-3xl opacity-40" />
+        {/* glow */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#F5B942]/20 via-transparent to-[#F5B942]/20 blur-3xl opacity-40" />
 
-  {/* video */}
-  <video
-    id="factoryVideo"
-    className="relative h-full object-contain z-10"
-    poster="/images/poster.jpg"
-  >
-    <source src="/videos/factory.mp4" type="video/mp4" />
-  </video>
+        {/* video */}
+        <video
+          id="factoryVideo"
+          playsInline
+          controls={false}
+          disablePictureInPicture
+          controlsList="nodownload nofullscreen noremoteplayback"
+          className="relative h-full object-contain z-10"
+          poster="/images/poster.jpg"
+        >
+          <source src="/videos/factory.mp4" type="video/mp4" />
+        </video>
 
   {/* play button */}
   <button
-    onClick={() => {
-      const video = document.getElementById("factoryVideo") as HTMLVideoElement;
+  onClick={() => {
+    const video = document.getElementById(
+      "factoryVideo"
+    ) as HTMLVideoElement;
 
-      if (video.paused) {
-        video.play();
-      } else {
-        video.pause();
-      }
-    }}
-    className="absolute z-20 w-20 h-20 rounded-full bg-[#F5B942] text-black text-3xl font-bold flex items-center justify-center hover:scale-110 transition"
-  >
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  }}
+  className="absolute z-20 w-24 h-24 rounded-full bg-red-500/90 backdrop-blur-xl border border-white/20 flex items-center justify-center shadow-[0_0_40px_rgba(239,68,68,0.6)] hover:scale-110 transition duration-300"
+>
+  <div className="ml-1 text-white text-4xl">
     ▶
-  </button>
+  </div>
+</button>
 
 </div>
 
@@ -480,67 +488,77 @@ export default function Home() {
 
 {/* CONTACT */}
 
-<section className="pb-32 px-6">
+<section className="pb-24 md:pb-32 px-4 md:px-6">
 
   <div className="max-w-7xl mx-auto">
 
-    <div className="grid lg:grid-cols-2 gap-10">
+    <div className="grid lg:grid-cols-2 gap-6 md:gap-10">
 
-      {/* left */}
-      <div className="bg-white/5 border border-white/10 rounded-[40px] p-10">
+      {/* LEFT */}
+      <div className="bg-white/5 border border-white/10 rounded-[30px] md:rounded-[40px] p-6 md:p-10 backdrop-blur-xl">
 
-        <p className="text-[#F5B942] font-semibold tracking-widest mb-4">
+        <p className="text-[#F5B942] font-semibold tracking-widest mb-4 text-sm">
           ALOQA
         </p>
 
-        <h2 className="text-5xl font-black leading-tight">
+        <h2 className="text-3xl md:text-5xl font-black leading-tight">
           Biz bilan bog‘laning
         </h2>
 
-        <p className="text-gray-400 mt-6 text-lg leading-relaxed">
-          Loyihangiz uchun professional lift yechimlarini taklif qilamiz.
+        <p className="text-gray-400 mt-5 md:mt-6 text-base md:text-lg leading-relaxed">
+          Loyihangiz uchun professional lift
+          yechimlarini taklif qilamiz.
         </p>
 
-        <div className="mt-10 space-y-6">
+        <div className="mt-8 md:mt-10 space-y-6">
 
-          <div>
+          {/* phone */}
+          <div className="bg-black/20 border border-white/10 rounded-2xl p-5">
+
             <p className="text-gray-500 text-sm">
               Telefon
             </p>
 
-            <h3 className="text-2xl font-bold mt-2">
+            <h3 className="text-lg md:text-2xl font-bold mt-2 break-all">
               +998 94 626 56 26
             </h3>
+
           </div>
 
-          <div>
+          {/* email */}
+          <div className="bg-black/20 border border-white/10 rounded-2xl p-5">
+
             <p className="text-gray-500 text-sm">
               Email
             </p>
 
-            <h3 className="text-2xl font-bold mt-2">
+            <h3 className="text-lg md:text-2xl font-bold mt-2 break-all">
               beshimovelnur@gmail.com
             </h3>
+
           </div>
 
-          <div>
+          {/* address */}
+          <div className="bg-black/20 border border-white/10 rounded-2xl p-5">
+
             <p className="text-gray-500 text-sm">
               Manzil
             </p>
 
-            <h3 className="text-2xl font-bold mt-2">
+            <h3 className="text-lg md:text-2xl font-bold mt-2">
               Toshkent, Uzbekistan
             </h3>
+
           </div>
 
         </div>
 
       </div>
 
-      {/* form */}
-      <div className="bg-white/5 border border-white/10 rounded-[40px] p-10">
+      {/* RIGHT */}
+      <div className="bg-white/5 border border-white/10 rounded-[30px] md:rounded-[40px] p-6 md:p-10 backdrop-blur-xl">
 
-        <h3 className="text-3xl font-black mb-8">
+        <h3 className="text-2xl md:text-3xl font-black mb-8">
           Taklif olish
         </h3>
 
@@ -549,22 +567,22 @@ export default function Home() {
           <input
             type="text"
             placeholder="Ismingiz"
-            className="w-full h-16 rounded-2xl bg-black/20 border border-white/10 px-5 outline-none focus:border-[#F5B942]/50"
+            className="w-full h-14 md:h-16 rounded-2xl bg-black/20 border border-white/10 px-5 outline-none focus:border-[#F5B942]/50 transition"
           />
 
           <input
             type="text"
             placeholder="Telefon raqamingiz"
-            className="w-full h-16 rounded-2xl bg-black/20 border border-white/10 px-5 outline-none focus:border-[#F5B942]/50"
+            className="w-full h-14 md:h-16 rounded-2xl bg-black/20 border border-white/10 px-5 outline-none focus:border-[#F5B942]/50 transition"
           />
 
           <textarea
             placeholder="Xabaringiz"
             rows={6}
-            className="w-full rounded-2xl bg-black/20 border border-white/10 p-5 outline-none focus:border-[#F5B942]/50"
+            className="w-full rounded-2xl bg-black/20 border border-white/10 p-5 outline-none focus:border-[#F5B942]/50 transition"
           />
 
-          <button className="w-full h-16 rounded-2xl bg-[#F5B942] text-black font-black text-lg hover:scale-[1.02] transition">
+          <button className="w-full h-14 md:h-16 rounded-2xl bg-[#F5B942] text-black font-black text-base md:text-lg hover:scale-[1.02] transition duration-300">
             Yuborish
           </button>
 
